@@ -1,13 +1,33 @@
+const setStreakToLocal = (streak=null) => {
+  localStorage.setItem('streak', JSON.stringify(streak));
+}
+
+const getStreakFromLocal = () => {
+  let localData = localStorage.getItem('streak');
+  const setData = localData !== null ? JSON.parse(localData) : '';
+  return setData;
+}
+
 const score = {
   streak: 0,
+  recordStreak: getStreakFromLocal(),
   computer: 0,
   user: 0
+}
+
+const updateRecord = () => {
+  if (score.streak > score.recordStreak) {
+    score.recordStreak = score.streak;
+    setStreakToLocal(score.streak);
+    updateScore();
+  }
 }
 
 const scoreCalc = (result) => {
   if (result.includes('win')) {
     score.streak += 1;
     score.user += 1;
+    updateRecord();
   } else if (result.includes('Tie')) {
     score.streak = 0;
   } else {
@@ -44,11 +64,13 @@ const rockPaperScissors = (rps) => {
 }
 
 const updateScore = () => {
+  $('#record-streak-val').html(score.recordStreak);
   $('#streak-val').html(score.streak);
   $('#user-score-val').html(score.user);
   $('#computer-score-val').html(score.computer);
-  
 }
+
+updateScore();
 
 $('#rock').on('click', () => {
   $('#outcome').html('');
