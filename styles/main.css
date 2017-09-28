@@ -1,3 +1,7 @@
 body {
   background-color: orange;
 }
+
+#score {
+  margin: 20px;
+}
