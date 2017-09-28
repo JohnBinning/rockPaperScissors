@@ -1,3 +1,12 @@
+let streak;
+
+const streakCalc = (result) => {
+  if (result.includes('win')) {
+    streak += 1;
+  } else {
+    streak = 0;
+  }
+}
 
 const rockPaperScissors = (rps) => {
   let outcome;
@@ -22,19 +31,23 @@ const rockPaperScissors = (rps) => {
   if (rps === computer) {
     outcome = `Tie!  You both picked ${rps}`
   } 
+  streakCalc(outcome);
   console.log(rps, '< user computer >', computer);
   return outcome;
 }
 
-const rock = document.getElementById('rock');
-rock.addEventListener('click', () => {
-  rockPaperScissors('rock');
+$('#rock').on('click', () => {
+  $('#outcome').html('');
+  $('#outcome').prepend(`<h2>${rockPaperScissors('rock')}`);
 })
 
 $('#paper').on('click', () => {
   $('#outcome').html('');
-  $('#outcome').prepend(`<h2>${rockPaperScissors('paper')}`)
+  $('#outcome').prepend(`<h2>${rockPaperScissors('paper')}`);
 })
 
-// rockPaperScissors('paper');
+$('#scissors').on('click', () => {
+  $('#outcome').html('');
+  $('#outcome').prepend(`<h2>${rockPaperScissors('scissors')}`);
+})
 
