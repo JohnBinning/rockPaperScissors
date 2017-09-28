@@ -12,12 +12,37 @@ body {
 
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem
+}
+
+button {
+   background-color: #4D483F;
+   border: none;
+   color: white;
+   border: 1px solid white;
+   padding: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 #score {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 1.3rem;
   background-color: rgba(0, 0, 0, .8);
-  padding: 5%;
+  padding: 3%;
   border-radius: 15px;
-  /*width: 100%;*/
+  /*min-width: 250px;*/
+}
+
+#button-container {
+  /*min-width: 250px;*/
+  /*margin-left: 15px;*/
 }

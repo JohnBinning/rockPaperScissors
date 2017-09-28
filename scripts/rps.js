@@ -43,15 +43,15 @@ const rockPaperScissors = (rps) => {
   switch(computerNum) {
     case 1:
       computer = 'rock';
-      outcome = rps === 'paper' ? 'paper covers rock, you win' :'rock smashes scissors, you lose';
+      outcome = rps === 'paper' ? 'Paper covers rock, you win' :'Rock smashes scissors, you lose';
       break;
     case 2:
       computer = 'paper';
-      outcome = rps === 'scissors' ? outcome = 'scissors cut paper, you win' : 'paper covers rock, you lose';
+      outcome = rps === 'scissors' ? outcome = 'Scissors cut paper, you win' : 'Paper covers rock, you lose';
       break;
     case 3: 
       computer = 'scissors';
-      outcome = rps === 'rock' ? outcome = 'rock smashes scissors, you win' : 'scissors cut paper, you lose';
+      outcome = rps === 'rock' ? outcome = 'Rock smashes scissors, you win' : 'Scissors cut paper, you lose';
       break;
     default:
       computer = 'rock';
