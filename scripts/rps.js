@@ -5,7 +5,6 @@ const score = {
 }
 
 const scoreCalc = (result) => {
-  console.log(result.includes('win'))
   if (result.includes('win')) {
     score.streak += 1;
     score.user += 1;
@@ -51,50 +50,21 @@ const updateScore = () => {
   
 }
 
-const setBg = () => {
-  const bgNum = Math.floor(Math.random() * (7 - 1)) + 1;
-  switch(bgNum) {
-    case 1:
-      document.body.style.backgroundColor = 'chartreuse';
-      break;
-    case 2:
-      document.body.style.backgroundColor = 'aqua';
-      break;
-    case 3: 
-      document.body.style.backgroundColor = 'red';
-      break;
-    case 4: 
-      document.body.style.backgroundColor = 'grey';
-      break;
-    case 5: 
-      document.body.style.backgroundColor = 'orange';
-      break;
-    case 6: 
-      document.body.style.backgroundColor = 'violet';
-      break;
-    default:
-      document.body.style.backgroundColor = 'grey';
-  }
-}
-
 $('#rock').on('click', () => {
   $('#outcome').html('');
   $('#outcome').prepend(`<h2>${rockPaperScissors('rock')}`);
   updateScore();
-  // setBg();
 })
 
 $('#paper').on('click', () => {
   $('#outcome').html('');
   $('#outcome').prepend(`<h2>${rockPaperScissors('paper')}`);
   updateScore();
-  // setBg();
 })
 
 $('#scissors').on('click', () => {
   $('#outcome').html('');
   $('#outcome').prepend(`<h2>${rockPaperScissors('scissors')}`);
   updateScore();
-  // setBg();
 })
 
