@@ -32,22 +32,28 @@ const rockPaperScissors = (rps) => {
     outcome = `Tie!  You both picked ${rps}`
   } 
   streakCalc(outcome);
-  console.log(rps, '< user computer >', computer);
   return outcome;
+}
+
+const updateStreak = () => {
+  $('#streak-val').html(streak);
 }
 
 $('#rock').on('click', () => {
   $('#outcome').html('');
   $('#outcome').prepend(`<h2>${rockPaperScissors('rock')}`);
+  updateStreak();
 })
 
 $('#paper').on('click', () => {
   $('#outcome').html('');
   $('#outcome').prepend(`<h2>${rockPaperScissors('paper')}`);
+  updateStreak();
 })
 
 $('#scissors').on('click', () => {
   $('#outcome').html('');
   $('#outcome').prepend(`<h2>${rockPaperScissors('scissors')}`);
+  updateStreak();
 })
 
