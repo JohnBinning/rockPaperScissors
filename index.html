@@ -9,17 +9,19 @@
     <h1>
       Rock Paper Scissors
     </h1>
-    <section>
-      <article id='score'>
-        <div id='record-streak'>Record Streak: <span id='record-streak-val'>0</span></div>
-        <div id='streak'>Current Win Streak: <span id='streak-val'>0</span></div>
-        <div id='user-score'>Your Score: <span id='user-score-val'>0</span></div>
-        <div id='computer-score'>Computer Score: <span id='computer-score-val'>0</span></div>
+      <section id='score-container'>
+        <article id='score'>
+          <div id='record-streak'>Record Streak: <span id='record-streak-val'>0</span></div>
+          <div id='streak'>Current Win Streak: <span id='streak-val'>0</span></div>
+          <div id='user-score'>Your Score: <span id='user-score-val'>0</span></div>
+          <div id='computer-score'>Computer Score: <span id='computer-score-val'>0</span></div>
+        </article>
+      </section>
+      <article id='button-container'>
+        <button id='rock'>rock</button>
+        <button id='paper'>paper</button>
+        <button id='scissors'>scissors</button>
       </article>
-      <button id='rock'>rock</button>
-      <button id='paper'>paper</button>
-      <button id='scissors'>scissors</button>
-    </section>
     <section id='outcome'></section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='./scripts/rps.js'></script>
