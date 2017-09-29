@@ -6,7 +6,8 @@ body {
   text-shadow: 1px 1px 10px black;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
+  justify-content: center;
   align-items: center;
   font-family: 'Indie Flower', cursive;
 }
@@ -62,4 +63,18 @@ button:hover {
 
 #paper {
   margin: 10px;
+}
+
+#middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.computer {
+  margin-left: 20px;
+}
+
+.user {
+  margin-right: 20px;
 }
