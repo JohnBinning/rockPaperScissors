@@ -52,14 +52,11 @@ button:hover {
   background-color: rgba(0, 0, 0, .8);
   padding: 3%;
   border-radius: 15px;
-  /*min-width: 250px;*/
 }
 
 #button-container {
   display: flex;
   align-items: space-between;
-  /*min-width: 250px;*/
-  /*margin-left: 15px;*/
 }
 
 #paper {
