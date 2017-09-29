@@ -71,22 +71,22 @@ const updateScore = () => {
   $('#computer-score-val').html(score.computer);
 }
 
+const handleClick = (btn) => {
+  $('#outcome').html('');
+  $('#outcome').prepend(`<h2>${rockPaperScissors(btn)}`);
+  updateScore();
+}
+
 updateScore();
 
 $('#rock').on('click', () => {
-  $('#outcome').html('');
-  $('#outcome').prepend(`<h2>${rockPaperScissors('rock')}`);
-  updateScore();
+  handleClick('rock');
 })
 
 $('#paper').on('click', () => {
-  $('#outcome').html('');
-  $('#outcome').prepend(`<h2>${rockPaperScissors('paper')}`);
-  updateScore();
+  handleClick('paper');
 })
 
 $('#scissors').on('click', () => {
-  $('#outcome').html('');
-  $('#outcome').prepend(`<h2>${rockPaperScissors('scissors')}`);
-  updateScore();
+  handleClick('scissors');
 })
