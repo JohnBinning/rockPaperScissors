@@ -38,7 +38,9 @@ button:hover {
   cursor: pointer;
 }
 
-#rock-hand {
+#rock-hand,
+#paper-plane,
+#scissors-icon {
   max-height: 30px;
   margin-top: 5px;
 }
