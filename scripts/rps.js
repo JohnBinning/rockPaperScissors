@@ -71,9 +71,9 @@ const updateScore = () => {
   $('#computer-score-val').html(score.computer);
 }
 
-const handleClick = (btn) => {
+const handleClick = (choice) => {
   $('#outcome').html('');
-  $('#outcome').prepend(`<h2>${rockPaperScissors(btn)}`);
+  $('#outcome').prepend(`<h2>${rockPaperScissors(choice)}`);
   updateScore();
 }
 
