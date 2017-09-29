@@ -3,7 +3,7 @@ const setStreakToLocal = (streak=null) => {
 }
 
 const getStreakFromLocal = () => {
-  let localData = localStorage.getItem('streak');
+  const localData = localStorage.getItem('streak');
   const setData = localData !== null ? JSON.parse(localData) : '';
   return setData;
 }
@@ -38,8 +38,9 @@ const scoreCalc = (result) => {
 
 const rockPaperScissors = (rps) => {
   let outcome;
-  const computerNum = Math.floor(Math.random() * (4 - 1)) + 1;
   let computer;
+  const computerNum = Math.floor(Math.random() * (4 - 1)) + 1;
+
   switch(computerNum) {
     case 1:
       computer = 'rock';
@@ -57,7 +58,7 @@ const rockPaperScissors = (rps) => {
       computer = 'rock';
   }
   if (rps === computer) {
-    outcome = `Tie!  You both picked ${rps}`
+    outcome = `Tie!  You both picked ${rps}`;
   } 
   scoreCalc(outcome);
   return outcome;
@@ -89,4 +90,3 @@ $('#scissors').on('click', () => {
   $('#outcome').prepend(`<h2>${rockPaperScissors('scissors')}`);
   updateScore();
 })
-
