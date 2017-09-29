@@ -35,6 +35,8 @@ button {
 
 button:hover {
   cursor: pointer;
+  background-color: #4b535e;
+  box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.8);
 }
 
 #rock-hand,
