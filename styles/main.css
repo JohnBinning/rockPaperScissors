@@ -1,12 +1,11 @@
 body {
   background-color: #4D483F;
   background-image: url('../assets/rock-paper-scissors.jpg');
-  background-size: cover;
+  background-size: 100%;
   color: white;
   text-shadow: 1px 1px 10px black;
   text-align: center;
   display: flex;
-  /*flex-direction: column;*/
   justify-content: center;
   align-items: center;
   font-family: 'Indie Flower', cursive;
@@ -54,6 +53,7 @@ button:hover {
   background-color: rgba(0, 0, 0, .8);
   padding: 3%;
   border-radius: 15px;
+  /*width: 200px;*/
 }
 
 #button-container {
@@ -69,10 +69,12 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
 }
 
 .computer {
-  margin-left: 20px;
+  display: absolute;
+  /*margin-left: 20px;*/
 }
 
 .user {

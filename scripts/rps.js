@@ -71,9 +71,25 @@ const updateScore = () => {
   $('#computer-score-val').html(score.computer);
 }
 
+const genChoiceImg = (rps) => {
+  if(rps === 'rock') {
+    return `<img src='./assets/rock-and-roll.png' id='rock-hand' alt='rock hand'>`;
+  } else if (rps === 'paper') {
+    return `<img src='./assets/paper-plane.png' id='paper-plane' alt='paper plane'>`;
+  } else {
+    return `<img src='./assets/scissors.png' id='scissors-icon' alt='scissors icon'>`;
+  }
+}
+
+const updateUserChoice = (rps) => {
+  $('#user-target').html('');
+  $('#user-target').prepend(genChoiceImg(rps));
+}
+
 const handleClick = (choice) => {
   $('#outcome').html('');
-  $('#outcome').prepend(`<h2>${rockPaperScissors(choice)}`);
+  $('#outcome').prepend(`<h2>${rockPaperScissors(choice)}</h2>`);
+  updateUserChoice(choice);
   updateScore();
 }
 
