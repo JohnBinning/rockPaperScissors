@@ -61,6 +61,7 @@ const rockPaperScissors = (rps) => {
     outcome = `Tie!  You both picked ${rps}`;
   } 
   scoreCalc(outcome);
+  updateChoiceDisplay(computer, 'computer');
   return outcome;
 }
 
@@ -81,15 +82,15 @@ const genChoiceImg = (rps) => {
   }
 }
 
-const updateUserChoice = (rps) => {
-  $('#user-target').html('');
-  $('#user-target').prepend(genChoiceImg(rps));
+const updateChoiceDisplay = (rps, player) => {
+  $(`#${player}-target`).html('');
+  $(`#${player}-target`).prepend(genChoiceImg(rps));
 }
 
 const handleClick = (choice) => {
   $('#outcome').html('');
   $('#outcome').prepend(`<h2>${rockPaperScissors(choice)}</h2>`);
-  updateUserChoice(choice);
+  updateChoiceDisplay(choice, 'user');
   updateScore();
 }
 
