@@ -61,6 +61,7 @@ const rockPaperScissors = (rps) => {
     outcome = `Tie!  You both picked ${rps}`;
   } 
   scoreCalc(outcome);
+  updateChoiceDisplay(computer, 'computer');
   return outcome;
 }
 
@@ -71,9 +72,25 @@ const updateScore = () => {
   $('#computer-score-val').html(score.computer);
 }
 
+const genChoiceImg = (rps) => {
+  if(rps === 'rock') {
+    return `<img src='./assets/rock-and-roll.png' id='rock-hand' alt='rock hand'>`;
+  } else if (rps === 'paper') {
+    return `<img src='./assets/paper-plane.png' id='paper-plane' alt='paper plane'>`;
+  } else {
+    return `<img src='./assets/scissors.png' id='scissors-icon' alt='scissors icon'>`;
+  }
+}
+
+const updateChoiceDisplay = (rps, player) => {
+  $(`#${player}-target`).html('');
+  $(`#${player}-target`).prepend(genChoiceImg(rps));
+}
+
 const handleClick = (choice) => {
   $('#outcome').html('');
-  $('#outcome').prepend(`<h2>${rockPaperScissors(choice)}`);
+  $('#outcome').prepend(`<h2>${rockPaperScissors(choice)}</h2>`);
+  updateChoiceDisplay(choice, 'user');
   updateScore();
 }
 

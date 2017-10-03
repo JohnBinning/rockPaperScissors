@@ -7,23 +7,33 @@
     <link href='./styles/main.css' type='text/css' rel='stylesheet'>
   </head>
   <body>
-    <h1>
-      Rock Paper Scissors
-    </h1>
-        <article id='score'>
-          <div id='record-streak'>Record Streak: <span id='record-streak-val'>0</span></div>
-          <div id='streak'>Current Win Streak: <span id='streak-val'>0</span></div>
-          <div id='user-score'>Your Score: <span id='user-score-val'>0</span></div>
-          <div id='computer-score'>Computer Score: <span id='computer-score-val'>0</span></div>
+        <article class='user choice-title'>
+          <h3 class='score-title'>Your choice: </h3>
+          <div id='user-target'><div class='x'>X</div></div>
         </article>
+    <section id='middle'>
+      <h1>
+        Rock Paper Scissors
+      </h1>
+      <section id='score'>
+        <div id='record-streak'>Record Streak: <span id='record-streak-val'>0</span></div>
+        <div id='streak'>Current Win Streak: <span id='streak-val'>0</span></div>
+        <div id='user-score'>Your Score: <span id='user-score-val'>0</span></div>
+        <div id='computer-score'>Computer Score: <span id='computer-score-val'>0</span></div>
+      </section>
       <article id='button-container'>
         <button id='rock'>rock <img src='./assets/rock-and-roll.png' id='rock-hand' alt='rock hand'></button>
         <button id='paper'>paper <img src='./assets/paper-plane.png' id='paper-plane' alt='paper plane'></button>
         <button id='scissors'>scissors <img src='./assets/scissors.png' id='scissors-icon' alt='scissors icon'></button>
       </article>
-    <section id='outcome'>
-      <h2>Click Rock, Paper, or Scissors to Play!</h2>
+      <section id='outcome'>
+        <h2>Click Rock, Paper, or Scissors to Play!</h2>
+      </section>
     </section>
+    <article class='computer choice-title'>
+      <h3 class='score-title'>Computer choice: </h3>
+      <div id='computer-target'><div class='x'>X</div></div>
+    </article>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='./scripts/rps.js'></script>
   </body>
