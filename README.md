@@ -1,5 +1,7 @@
 # rockPaperScissors
 
-A Rock/Paper/Scissors game I made for my nephews
+This is a Rock/Paper/Scissors game I made for my nephews.
 
-check out the game [here](https://johnbinning.github.io/rockPaperScissors/)
+Check out the game [here](https://johnbinning.github.io/rockPaperScissors/)
+
+![Image](assets/ScreenShot.png)
